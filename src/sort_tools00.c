@@ -6,7 +6,7 @@
 /*   By: tkoulal <tkoulal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/24 19:01:56 by tkoulal           #+#    #+#             */
-/*   Updated: 2024/02/25 23:25:21 by tkoulal          ###   ########.fr       */
+/*   Updated: 2024/02/27 20:51:20 by tkoulal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ t_list	*fill_stack(int ac, char **av)
 		}
 		ft_free(nbrs);
 	}
-	if (lstsize(stack_a) <= 1)
+	if (lstsize(stack_a) < 1)
 		exit(1);
 	return (stack_a);
 }
