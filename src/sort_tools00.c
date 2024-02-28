@@ -6,7 +6,7 @@
 /*   By: tkoulal <tkoulal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/24 19:01:56 by tkoulal           #+#    #+#             */
-/*   Updated: 2024/02/27 20:51:20 by tkoulal          ###   ########.fr       */
+/*   Updated: 2024/02/28 08:58:59 by tkoulal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,11 @@ t_list	*fill_stack(int ac, char **av)
 			if (is_digit(nbrs[j]))
 				addback(&stack_a, newlst(ft_atoi(nbrs[j++])));
 			else
-				putts("Error!");
+				putts("Error");
 		}
 		ft_free(nbrs);
 	}
-	if (lstsize(stack_a) < 1)
+	if (lstsize(stack_a) == 1)
 		exit(1);
 	return (stack_a);
 }

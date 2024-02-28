@@ -6,7 +6,7 @@
 /*   By: tkoulal <tkoulal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 00:49:32 by tkoulal           #+#    #+#             */
-/*   Updated: 2024/02/25 23:04:41 by tkoulal          ###   ########.fr       */
+/*   Updated: 2024/02/28 08:47:04 by tkoulal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void	apply_actions(char *str, t_list **stk_a, t_list **stk_b)
 	else if (!ft_strncmp(str, "rrr\n", 4))
 		rrr(stk_a, stk_b);
 	else
-		(putts("ERROR"), exit(1));
+		(putts("Error"), exit(1));
 }
 
 int	main(int ac, char **av)

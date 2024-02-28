@@ -6,7 +6,7 @@
 /*   By: tkoulal <tkoulal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 00:42:31 by tkoulal           #+#    #+#             */
-/*   Updated: 2024/02/25 23:25:40 by tkoulal          ###   ########.fr       */
+/*   Updated: 2024/02/28 09:06:24 by tkoulal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,20 +53,22 @@ char	*malloc_word(char *str)
 char	**ft_for_norminette(char *str, char **arr)
 {
 	int	i;
+	char *t;
 
 	i = 0;
+	t = str;
+	while(*t == 32)
+		t++;
+	if(*t == '\0')
+	{
+		putts("Error");
+		exit(1);
+	}
 	while (*str)
 	{
-		while (*str && *str == 32)
-		{
-			if (*(str + 1) == '\0')
-			{
-				putts("Error");
-				exit(1);
-			}
+		if (*str == 32)
 			str++;
-		}
-		if (*str && *str != 32)
+		else
 		{
 			arr[i++] = malloc_word(str);
 			while (*str && *str != 32)
